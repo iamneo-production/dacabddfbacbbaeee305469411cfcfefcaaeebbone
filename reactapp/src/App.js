@@ -4,23 +4,23 @@ import { useState } from 'react';
 
 function App() {
   const [name,setName]=useState('');
-  const [greet,setGreet] = useState('');
+  const [greeting,setGreeting] = useState('');
   const handleChange=(e)=>{
        setName(e.target.value);
   }
   const handleSubmit=(e)=>{
       e.preventDefault();
-      setGreet(`Hello ${name}`);
+      setGreeting(`Hello: ${name}`);
   }
   return (
     <div className="App">
       <h1>Hey!! Greeting</h1>
-      <form>
-        <label id="data-testid">Enter your name</label>
-        <input placeholder='User' name="fname" onChange={handleChange}/>
-        <button className='btn' onClick={handleSubmit} type='submit'>Say Hello</button>
+      <form test-id="form" onSubmit={handleSubmit}>
+        <label data-testid="label">Enter your name</label>
+        <input placeholder='User' value={name} onChange={handleChange}/>
+        <button className='btn' test-id="buttonElement" type='submit'>Say Hello</button>
       </form>
-      <h2>{ greet && }</h2>
+      {greeting && <h2>{setGreeting}!</h2>}
     </div>
   );
 }
