@@ -14,7 +14,7 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Hey!! Greeting</h1>
+      <h1>Hey!!! Greeting</h1>
       <form test-id="form" onSubmit={handleSubmit}>
         <label data-testid="label">Enter your name</label>
         <input placeholder='User' value={name} onChange={handleChange}/>
