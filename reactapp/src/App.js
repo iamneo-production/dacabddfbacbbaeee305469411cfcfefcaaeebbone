@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
 function App() {
-  const [name,setName]=useState
+  const [name,setName]=useState('Praveen')
   return (
     <div className="App">
-       <form>
-          
-        </form>
+       <h1>
+        Hello
+       </h1>
     </div>
   );
 }
